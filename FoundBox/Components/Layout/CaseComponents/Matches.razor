@@ -1,0 +1,21 @@
+﻿<div class="container-fluid">
+    <div class="d-flex justify-content-start px-4 py-4">
+        <button class="fs-6 px-2 bg-white border-0" @onclick="GoToFindingPage">Findings</button>
+        <button class="d-flex fs-6 border-bottom pe-1 bg-white border-0" @onclick="GoToMatchesPage">
+            <div class="pe-2">Matches</div>
+            <div class="bg-black bg-opacity-25 rounded-2">2</div>
+        </button>
+    </div>
+    <MatchesPanel />
+</div>
+
+@code {
+    void GoToFindingPage()
+    {
+        NavManager.NavigateTo("/cases/findings");
+    }
+    void GoToMatchesPage()
+    {
+        NavManager.NavigateTo("/cases/matches");
+    }
+}

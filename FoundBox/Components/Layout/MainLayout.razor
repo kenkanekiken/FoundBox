@@ -1,15 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
+<div class="page d-flex flex-column min-vh-100">
     <main>
         <div class="top-row px-4">
-            <NavBarWithAccount />
+            <FoundBox.Components.Layout.GeneralComponents.NavBarWithAccount/>
         </div>
         <article class="">
             @Body
         </article>
-        <Footer />
     </main>
+    <footer>
+        <FoundBox.Components.Layout.GeneralComponents.Footer/>
+    </footer>
 </div>
 
 <div id="blazor-error-ui">
